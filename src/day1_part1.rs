@@ -17,7 +17,7 @@ pub mod day1_part1 {
             let line = line.expect("Cant read line");
             sum = sum + get_calibration_value(line);
         }
-        println!("Sum: {}", sum);
+        println!("Day 1, Part 1 - Sum: {}", sum);
     }
 
     fn get_calibration_value(line: String) -> i32 {
