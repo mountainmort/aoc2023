@@ -16,7 +16,7 @@ pub mod day2_part2 {
             let split_id: Vec<&str> = line.split(":").collect();
             let min_rgb = calculate_min_rgb_game(split_id[1]);
             let power = calculate_power_game(min_rgb);
-            println!("Power: {}", power.to_string());
+            // println!("Power: {}", power.to_string());
             sum = sum + power;
         }
         println!("Day 2, Part 2 - Sum: {}", sum);
@@ -52,11 +52,11 @@ pub mod day2_part2 {
             let value = split_colors[1].parse::<i32>().unwrap();
             let color = split_colors[2];
             // println!("Split: {}, Color: {}, Value: {}", split, color, value);
-            if (color == "red" && value > min_rgb[0]) {
+            if color == "red" && value > min_rgb[0] {
                 min_rgb[0] = value;
-            } else if (color == "green" && value > min_rgb[1]) {
+            } else if color == "green" && value > min_rgb[1] {
                 min_rgb[1] = value;
-            } else if (color == "blue" && value > min_rgb[2]) {
+            } else if color == "blue" && value > min_rgb[2] {
                 min_rgb[2] = value;
             }
         }
